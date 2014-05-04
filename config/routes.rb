@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'articles#index'
-
+  get 'tags/:tag', to: 'articles#index', as: :tag
   resources :articles
 
   # The priority is based upon order of creation: first created -> highest priority.

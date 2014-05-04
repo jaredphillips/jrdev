@@ -4,8 +4,8 @@
       <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
 
       <ul>
-      <% @article.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
@@ -15,19 +15,36 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
+  
+  <div class="field">
+    <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+    <%= f.text_field :tag_list %>
+  </div>
+
+
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
   </div>
+
   <div class="field">
     <%= f.label :url %><br>
     <%= f.text_field :url %>
   </div>
+
+  <div class="field">
+    <%= f.label :source, "The source of the article shorted for presentation" %><br>
+    <%= f.text_field :source %>
+  </div>
+
+
   <div class="field">
     <%= f.label :promoted %><br>
     <%= f.check_box :promoted %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
