@@ -1,5 +1,9 @@
 <h1>New article</h1>
 
+<%= gravatar_for @user %>
+<%= @user.name %>
+
 <%= render 'form' %>
 
 <%= link_to 'Back', articles_path %>
+<%= link_to "Sign out", session_path(@user), method: "delete" %>

@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    @user = User.find_by(params[:id])
     @article = Article.new
   end
 
