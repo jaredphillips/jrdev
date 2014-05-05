@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/new'
+  resources :users
 
   root 'articles#index'
   get 'tags/:tag', to: 'articles#index', as: :tag
