@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
     if params[:tag]
       @articles = Article.tagged_with(params[:tag])
     else
-      @articles = Article.all.order('created_at DESC').paginate(page: params[:page], per_page: 100)
+      @articles = Article.all.order('created_at DESC').paginate(page: params[:page], per_page: 6)
     end
   end
 

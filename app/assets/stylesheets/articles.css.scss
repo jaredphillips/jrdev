@@ -80,7 +80,7 @@ section {
 
 .article-container {
 	width: 250px;
-	height: 300px;
+	height: 400px;
 	display: inline-block;
 	overflow: hidden;
 	transition: 1s;
@@ -88,30 +88,24 @@ section {
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-bottom: 15px;
-	// &:hover {
-	// 	background: #e5e5e5;
-	// }
-	h2 {
-		height: 60px;
+	.article-head {
+		display: block;
+		padding-left: 15px;
+		padding-right: 15px;
+		height: 100px;
 		padding-top: 10px;
 		font-family: 'Montserrat', sans-serif;
-		font-size: 1.1em;		
+		font-size: 1.42em;		
 		letter-spacing: 0px;
 		line-height: 1.023em;
 		color: #3b3b3b;
-		padding-bottom: 30px;
-		border-bottom: 1px solid #4c4c4c;
+		border-bottom: 3px solid #f6f6f6;
 		text-align: center;
-		&:hover {
-			text-decoration: underline;
-		}
-		a {
+		background: #edf9ff;
+	}
+	a {
 		text-decoration: none;
 		color: #3b3b3b;
-		&:hover {
-			color: #87D7FF;
-		}
-		}
 	}
 	p {
 		padding-left: 14px;
@@ -121,10 +115,16 @@ section {
 		font-style: italic;
 		line-height: 1.23em;
 		padding-bottom: 15px;
-		border-bottom: 1px solid #4c4c4c;
+		border-bottom: 3px solid #f6f6f6;
 		display: block;
 		height: 110px;
 	}
+}
+
+.article-head:hover {
+	background: #87D7FF;
+	color: white;
+	transition: .4s;
 }
 
 
@@ -146,7 +146,7 @@ ul.tags {
 	margin-left: 20px;
 	margin-top: 10px;
 	padding: 0 10px 0 12px;
-	background: #FF6D63;
+	background: #BFBFBF;
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 12px;
@@ -167,7 +167,7 @@ ul.tags {
 	left: -12px;
 	width: 0;
 	height: 0;
-	border-color: transparent #FF6D63 transparent transparent;
+	border-color: transparent #BFBFBF transparent transparent;
 	border-style: solid;
 	border-width: 12px 12px 12px 0;		
 }
@@ -197,3 +197,124 @@ ul.tags {
 	border-color: transparent #555 transparent transparent;
 }
 
+.pagination-buttons {
+	list-style-type: none;
+	display: inline-block;
+	margin-top: 3%;
+	width: 100%;
+	.previous {
+		width: 45%;
+		transition: .3s;
+		&:hover {
+		transition: .3s;
+		color: #F7CE56;
+		}
+	}
+	.next {
+		width: 45%;
+		transition: .3s;
+		&:hover {
+		transition: .3s;
+		color: #87D7FF;
+		}
+	}
+	.back {
+		transition: .3s;
+		&:hover {
+		transition: .3s;
+		color: #87D7FF;
+		}
+	}
+}
+
+.pagination-buttons a {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2em;		
+	letter-spacing: 0px;
+	line-height: 1.023em;
+	color: #3b3b3b;
+	text-decoration: none;
+}
+
+
+/* Wobble Vertical */
+@-webkit-keyframes wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.wobble-vertical {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.wobble-vertical:hover, .wobble-vertical:focus, .wobble-vertical:active {
+  -webkit-animation-name: wobble-vertical;
+  animation-name: wobble-vertical;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
