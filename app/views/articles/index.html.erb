@@ -19,20 +19,18 @@
         </ul>
       </div>
     <% end %>
-    <ul class="pagination-buttons">
+    <div class="pagination-buttons">
       <% if params[:tag] %>
-        <li><%= link_to "back", root_path, class: "back wobble-vertical" %></li>
+        <%= link_to "back", root_path, class: "travel pop" %>
       <% else %>
         <% if @articles.previous_page %>
-          <li>
-            <%= link_to "previous", params.merge(page: @articles.previous_page), class: "previous wobble-vertical" %>
-          </li>
+          <%= link_to "previous", params.merge(page: @articles.previous_page), class: "travel pop" %>
         <% end %>
         <% if @articles.next_page %>  
-          <li><%= link_to "next", params.merge(page: @articles.next_page), class: "next wobble-vertical" %></li>
+          <%= link_to "next", params.merge(page: @articles.next_page), class: "travel pop" %>
         <% end %>
       <% end %>
-    </ul>
+    </div>
   </section>
 </div>
 

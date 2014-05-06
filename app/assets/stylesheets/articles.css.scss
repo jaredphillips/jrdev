@@ -69,31 +69,25 @@ aside {
 }
 
 section {
-	border-top: 1px solid #F7CE56;
 	margin-top: 60px;
 	float: right;
 	width: 70%;
-	height: 1100px;
+	height: 100%;
 	display: inline-block;
 }
 
 
 .article-container {
 	width: 250px;
-	height: 400px;
+	height: 340px;
 	display: inline-block;
 	overflow: hidden;
 	transition: 1s;
-	border-radius: 7px;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-bottom: 15px;
+	padding: 0 15px 15px 15px;
 	.article-head {
 		display: block;
-		padding-left: 15px;
-		padding-right: 15px;
 		height: 100px;
-		padding-top: 10px;
+		padding: 10px 15px 0 15px;
 		font-family: 'Montserrat', sans-serif;
 		font-size: 1.42em;		
 		letter-spacing: 0px;
@@ -117,7 +111,7 @@ section {
 		padding-bottom: 15px;
 		border-bottom: 3px solid #f6f6f6;
 		display: block;
-		height: 110px;
+		height: 100px;
 	}
 }
 
@@ -198,123 +192,63 @@ ul.tags {
 }
 
 .pagination-buttons {
-	list-style-type: none;
-	display: inline-block;
-	margin-top: 3%;
-	width: 100%;
-	.previous {
-		width: 45%;
-		transition: .3s;
-		&:hover {
-		transition: .3s;
-		color: #F7CE56;
-		}
-	}
-	.next {
-		width: 45%;
-		transition: .3s;
-		&:hover {
-		transition: .3s;
-		color: #87D7FF;
-		}
-	}
-	.back {
-		transition: .3s;
-		&:hover {
-		transition: .3s;
-		color: #87D7FF;
-		}
-	}
-}
-
-.pagination-buttons a {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 2em;		
 	letter-spacing: 0px;
 	line-height: 1.023em;
 	color: #3b3b3b;
 	text-decoration: none;
+	text-align: right;
+	color: #3b3b3b;
+	border-bottom: 7px solid #fff3f5;
+	margin-bottom: 80px;
+	a {
+		text-decoration: none;
+		color: #3b3b3b;
+		margin-left: 40px;
+	}
 }
 
 
-/* Wobble Vertical */
-@-webkit-keyframes wobble-vertical {
-  16.65% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
 
-  33.3% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-  }
 
-  49.95% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-  }
-
-  66.6% {
-    -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
-  }
-
-  83.25% {
-    -webkit-transform: translateY(1px);
-    transform: translateY(1px);
+@-webkit-keyframes pop {
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
 
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 
-@keyframes wobble-vertical {
-  16.65% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-
-  33.3% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-  }
-
-  49.95% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-  }
-
-  66.6% {
-    -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
-  }
-
-  83.25% {
-    -webkit-transform: translateY(1px);
-    transform: translateY(1px);
+@keyframes pop {
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
 
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 
-.wobble-vertical {
+.pop {
   display: inline-block;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
-.wobble-vertical:hover, .wobble-vertical:focus, .wobble-vertical:active {
-  -webkit-animation-name: wobble-vertical;
-  animation-name: wobble-vertical;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
+.pop:hover, .pop:focus, .pop:active {
+  -webkit-animation-name: pop;
+  animation-name: pop;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
