@@ -2,178 +2,133 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@font-face {
-	font-family: 'icomoon';
-	src:font-url('icomoon.eot?3edy7d');
-	src:font-url('icomoon.eot?#iefix3edy7d') format('embedded-opentype'),
-		font-url('icomoon.woff?3edy7d') format('woff'),
-		font-url('icomoon.ttf?3edy7d') format('truetype'),
-		font-url('icomoon.svg?3edy7d#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+// Clearfix
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+  }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+* { 
+-moz-ring-sizing: border-ring; 
+-webkit-ring-sizing: border-ring; 
+ring-sizing: border-ring; 
+box-sizing: border-box 
 }
 
-[class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+// Variables
 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.icon-search:before {
-	content: "\e607";
-}
-.icon-chevron-right:before {
-	content: "\e600";
-}
-.icon-chevron-left:before {
-	content: "\e601";
-}
-.icon-paperplane:before {
-	content: "\e602";
-}
-.icon-feather:before {
-	content: "\e603";
-}
-.icon-search2:before {
-	content: "\e608";
-}
-.icon-book:before {
-	content: "\e604";
-}
-.icon-twitter:before {
-	content: "\e605";
-}
-.icon-envelope-o:before {
-	content: "\f003";
-}
-.icon-leaf:before {
-	content: "\f06c";
-}
-.icon-github:before {
-	content: "\e606";
-}
-
-// Varibiables
-
-$body-font: 'Maven Pro', 'sans-serif';
-$header-font: 'Merriweather Sans', 'sans-serif';
-$tag-font: 'Open Sans', 'sans-serif';
 
 // Article index page
 
 body {
-	background: #F2F2F2;
-	// background: url('greyzz.png');
-}
-
-.header {
-	display: block;
-	height: 100px;
 	background: #FFFFFF;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding-left: 90px;
-	z-index: 2;
-	opacity: .9;
-	.left-head {
-		h1 {
-			font-family: $header-font;
-			span {
-				color: red;
-			}
-			a {
-				text-decoration: none;
-				color: black;
-				&:hover {
-					color: orange;
-				}
-			}
-		}
-		h2 {
-			opacity: .5;
-			position: relative;
-			top: -20px;
-			font-family: $header-font;
-			font-size: 12px;
-		}
-	}
 }
-
-div.sub-header {
-	position: relative;
-	top: 95px;
-	left: 0;
-	width: 100%;
-	height: 6px;
-	background: #96F8E3;
-	h2 {
-		position: absolute;
-		top: -15px;
-		font-size: 19px;
-		padding-left: 90px;
-		font-weight: normal;
-	}
-}
-
 
 
 
 .wrapper {
-	position: absolute;
-	margin: 10%;
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
 	width: 80%;
-	border-left: 1px solid #e9e9e9;
-	border-right: 1px solid #e9e9e9;
-	padding-bottom: 10%;
+	height: 900px;
 }
-
-.article {
-	height: 280px;
-	width: 28.333%;
-	background: white;
-	float: left;
-	margin: 2.5%;
-	position: relative;
-	ul {
-		list-style-type: none;
-		padding-left: 30px;
-		padding-right: 30px;
-		li {
-			h2 {
-			}
+	
+aside {
+	margin: 0;
+	width: 18%;
+	height: 100px;
+	position: fixed;
+	header {
+		margin-top: 60px;
+		border-top: 2px solid #f6f6f6;
+		h1 {
+			text-align: right;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 2.688em;		
+			letter-spacing: 0px;
+			line-height: 1.023em;
+			color: #3b3b3b;
+		}
+		h3 {
+			color: #3b3b3b;
+			font-family: 'Imprima', sans-serif;				
+			font-style: italic;
+			font-size: 16px;
+			text-align: right;
 		}
 	}
 }
 
-.article-title {
-	font-family: $header-font;
-	font-size: 20px;
-	color: black;
+section {
+	border-top: 1px solid #F7CE56;
+	margin-top: 60px;
+	float: right;
+	width: 70%;
+	height: 1100px;
+	display: inline-block;
 }
 
-.article-description {
-	font-family: $body-font;
-	letter-spacing: 1px;
-	font-size: 15px;
-	color: #666666;
+
+.article-container {
+	width: 250px;
+	height: 300px;
+	display: inline-block;
+	overflow: hidden;
+	transition: 1s;
+	border-radius: 7px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	// &:hover {
+	// 	background: #e5e5e5;
+	// }
+	h2 {
+		height: 60px;
+		padding-top: 10px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.1em;		
+		letter-spacing: 0px;
+		line-height: 1.023em;
+		color: #3b3b3b;
+		padding-bottom: 30px;
+		border-bottom: 1px solid #4c4c4c;
+		text-align: center;
+		&:hover {
+			text-decoration: underline;
+		}
+		a {
+		text-decoration: none;
+		color: #3b3b3b;
+		&:hover {
+			color: #87D7FF;
+		}
+		}
+	}
+	p {
+		padding-left: 14px;
+		padding-right: 14px;
+		color: #3b3b3b;
+		font-family: 'Imprima', sans-serif;				
+		font-style: italic;
+		line-height: 1.23em;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #4c4c4c;
+		display: block;
+		height: 100px;
+	}
 }
 
-.tags {
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	left: 0px;
-	bottom: 60px;
+
+ul.tags {
+	padding: 0px 10px;
 	list-style: none;
 	z-index: 1;
 }
@@ -188,10 +143,11 @@ div.sub-header {
 
 .tags a {
 	margin-left: 20px;
+	margin-top: 10px;
 	padding: 0 10px 0 12px;
-	background: #0089e0;
+	background: #FF6D63;
 	color: #fff;
-	font-family: $tag-font;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 12px;
 	text-decoration: none;
 	-moz-border-radius-bottom-right: 4px;
@@ -210,7 +166,7 @@ div.sub-header {
 	left: -12px;
 	width: 0;
 	height: 0;
-	border-color: transparent #0089e0 transparent transparent;
+	border-color: transparent #FF6D63 transparent transparent;
 	border-style: solid;
 	border-width: 12px 12px 12px 0;		
 }
@@ -240,80 +196,3 @@ div.sub-header {
 	border-color: transparent #555 transparent transparent;
 }
 
-.button {
-	position: absolute;
-	bottom: 0;
-	width: 80%;
-	height: 45px;
-	background: #96F8E3;
-	color: white;
-	font-family: $body-font;
-	font-size: 16px;
-	transition: .9s;
-	text-decoration: none;
-	vertical-align: middle;
-	line-height: 45px;
-	&:hover {
-		background: #D8D8D8;
-		transition: .9s;
-	}
-	a {
-		padding-left: 4%;
-		text-decoration: none;
-	}
-}
-
-.twitter-button {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	background: #FCFDBA;
-	height: 45px;
-	width: 20%;
-	.icon-search2 {
-		color: grey;
-		font-size: 30px;
-	}
-}
-
-a:-webkit-any-link{
-text-decoration:none !important;
-}
-
-.pagination {
-	display: inline;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	font-family: $body-font;
-	text-decoration: none;
-	padding: 2%;
-	border: 1px solid #0089e0;
-}
-
-a.pagination.previous {
-	margin-right: 11%;
-	&:hover {
-		background:#555;
-	}
-}
-
-a.pagniation.next {
-	margin-right: 11%;
-	&:hover {
-		background: #555;
-	}
-}
-
-.subscribe {
-	display: inline;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	font-family: $body-font;
-	text-decoration: none;
-	padding: 2%;
-	border: 1px solid #0089e0;
-	position: absolute;	
-	color: black;
-}

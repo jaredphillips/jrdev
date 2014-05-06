@@ -40,6 +40,12 @@ gem 'rails_12factor', group: :production
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Cross browser stuff
+gem 'normalize-rails'
+
+# Haml for nicer html
+gem 'haml', '~> 4.0.5'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'

@@ -1,56 +1,27 @@
-<div class="header">
-  <div class="left-head">
-    <h1>
-      <span class="icon-chevron-right">
-      </span>
-      <%= link_to "The Junior Developer", root_path %>
-    </h1>
-    <h2>All the newest tutorials, tips, tricks and resources every junior developer needs</h2>
-  </div>
-</div><!--  end of header --> 
-<div class="sub-header">
-  
+<div class="wrapper">
+  <aside>
+    <header>
+      <h1>the junior developer</h1>
+      <h3>all the resources, articles and information you need</h3>
+    </header>
+  </aside>
+  <section>
+    <% @articles.each do |article| %>
+      <div class="article-container">
+        <h2>
+          <%= link_to article.title, article.url, target: "_blank" %>
+        </h2>
+        <p>
+          <%= article.description %>
+        </p>
+        <ul class="tags">
+          <li>
+            <%= raw article.tag_list.map { |tag| link_to tag, tag_path(tag)}.join(' ') %>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+  </section>
 </div>
 
-<div class="wrapper">
-  <% @articles.each do |article| %>
-    <div class="article">
-      <ul>
-        <li>
-          <h2 class="article-title"><%= link_to article.title, article.url, target: "_blank" %></h2>
-        </li>
-        <li>
-          <p class="article-description"><%= article.description %></p>
-          </li>
-      </ul>
-      <ul class="tags">
-        <li>
-          <%= raw article.tag_list.map { |tag| link_to tag, tag_path(tag)}.join(' ') %>
-        </li>
-      </ul>
-      <div class="button">
-        <%= link_to article.source, article.url, target: "_blank" %>
-      </div>
-      <div class="twitter-button">
-        <span class="icon-search2"></span>
-      </div>
-    </div>
-  <% end %> <!-- end of article -->
-
-  <div class="subscribe">
-    <%= link_to "Subscribe", "http://eepurl.com/Tze0T" %>
-  </div>
-  <div class="pagination-buttons">
-    <% if params[:tag] %>
-      <%= link_to "back", root_path, class: "pagination" %>
-    <% else %>
-      <% if @articles.previous_page %>
-        <%= link_to "Previous", params.merge(page: @articles.previous_page), class: "pagination previous" %>
-      <% end %>
-      <% if @articles.next_page %>  
-        <%= link_to "Next", params.merge(page: @articles.next_page), class: "pagination next" %>
-      <% end %>
-    <% end %>
-  </div>
-</div><!-- end of wrapper -->
 
