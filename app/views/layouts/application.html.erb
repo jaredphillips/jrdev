@@ -4,6 +4,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Imprima' rel='stylesheet' type='text/css'>
 	<%= favicon_link_tag '#' %>
+	<%= auto_discovery_link_tag(:atom, articles_url(format: "atom")) %>
   <title>The Junior Developer</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
