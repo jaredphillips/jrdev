@@ -1,7 +1,7 @@
 <div class="wrapper">
   <aside>
     <header>
-      <h1>the junior developer</h1>
+      <h1><%= link_to 'the junior developer', root_path, class: "title" %></h1>
       <h3>all the resources, articles and information you need</h3>
       <%= link_to "subscribe", "http://eepurl.com/Tze0T", class: "button newsletter" %>
       <%= link_to "RSS", articles_url(format: "atom"), class: "button rss" %>
