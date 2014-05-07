@@ -46,6 +46,12 @@ gem 'normalize-rails'
 # Haml for nicer html
 gem 'haml', '~> 4.0.5'
 
+# # Twitter gem for tweeting from app
+# gem 'twitter', '~> 5.8.0'
+
+# # Omniauth for twitters
+# gem 'omniauth-twitter', '~> 1.0.1'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
