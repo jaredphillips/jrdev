@@ -293,20 +293,3 @@ ul.tags {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
-
-/* Portrait tablet and small desktops */
-@media (max-width: 940px) {
-	body: {
-		background:pink;
-	}
-}
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
-}
-
-/* Landscape phones and down */
-@media (max-width: 480px) {
-}
-
-
