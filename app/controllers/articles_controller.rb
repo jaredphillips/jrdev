@@ -49,7 +49,7 @@ private
   end
 
   def article_params
-    params.require(:article).permit(:title, :description, :url, :promoted, :tag_list, :source)
+    params.require(:article).permit(:title, :description, :url, :promoted, :tag_list, :source, :twitter_info)
   end
 
   def admin_user

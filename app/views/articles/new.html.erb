@@ -1,9 +1,16 @@
-<h1>New article</h1>
+<div class="wrapper">
+	<div class="left">
+		<h3>New article</h3>
 
-<%= gravatar_for @user %>
-<%= @user.name %>
+		<%= gravatar_for @user %>
+		<p><%= @user.name %></p>
+	</div>
+	<div class="right">
+		<%= render 'form' %>
+	
 
-<%= render 'form' %>
+		<%= link_to 'Back', articles_path %>
 
-<%= link_to 'Back', articles_path %>
-<%= link_to "Sign out", session_path(@user), method: "delete" %>
+		<%= link_to "Sign out", session_path(@user), method: "delete" %>
+	</div>
+</div>

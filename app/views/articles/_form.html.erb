@@ -24,11 +24,11 @@
 
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, rows: 10 %>
   </div>
 
   <div class="field">
-    <%= f.label :url %><br>
+    <%= f.label :url, "Long form URL" %><br>
     <%= f.text_field :url %>
   </div>
 
@@ -36,7 +36,11 @@
     <%= f.label :source, "The source of the article shorted for presentation" %><br>
     <%= f.text_field :source %>
   </div>
-
+  
+  <div class="field">
+    <%= f.label :twitter_info, "Headline followed by | bit.ly link" %><br>
+    <%= f.text_field :twitter_info %>
+  </div>
 
   <div class="field">
     <%= f.label :promoted %><br>
