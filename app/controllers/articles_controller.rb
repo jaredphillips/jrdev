@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :admin_user, only: [:create, :destroy, :new, :update, :show, :edit]
 
   def index
     if params[:tag]
@@ -49,5 +50,13 @@ private
 
   def article_params
     params.require(:article).permit(:title, :description, :url, :promoted, :tag_list, :source)
+  end
+
+  def admin_user
+    if current_user == nil
+      redirect_to(root_url)
+    else 
+      current_user.admin? 
+    end
   end
 end
