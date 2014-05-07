@@ -2,8 +2,11 @@
   <aside>
     <header>
       <h1><%= link_to 'the junior developer', root_path, class: "title" %></h1>
-      <h3>all the resources, articles and information you need</h3>
-      <%= link_to "subscribe", "http://eepurl.com/Tze0T", class: "button newsletter" %>
+      <h3 class="sub-heading">
+        <span class="label">all the resources, articles and information you need</span>
+        <span class="label">Created by <%= link_to "Jared Phillips", "http://www.jaredphillips.io", target: "_blank" %></span>
+      </h3>
+      <%= link_to "subscribe", "http://eepurl.com/Tze0T", class: "button subscribe" %>
       <%= link_to "RSS", articles_url(format: "atom"), class: "button rss" %>
       <%= link_to "twitter", "http://twitter.com/thejrdev", class: "button twitter" %>
     </header>
