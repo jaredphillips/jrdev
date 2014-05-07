@@ -72,32 +72,51 @@ a.button {
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
 	float: right;
-	height: 60px;
+	height: 40px;
 	letter-spacing: 2px;
-	line-height: 60px;
+	line-height: 40px;
 	width: 100%;
 	overflow: hidden;
 	position: relative;
 	text-align: center;
-	.button:hover {
-		background-color: #FF6D63;
-	 	color: white;
-	  border: 1px solid white;
-	}
 }
 
 .newsletter {
-	margin: 90px 0 15px 0;
+	margin: 60px 0 15px 0;
   background-color: white;
  	color: #FF6D63;
   border: 1px solid #FF6D63;
-
+  transition: .5s;
+  &:hover {
+		background: #FF6D63;
+		color: white;
+		transition: .5s;
+  }
 }
 
 .rss {
 	background-color: white;
 	color: #F7CE56;
 	border: 1px solid #F7CE56;
+	transition: .5s;
+	&:hover {
+		background: #F7CE56;
+		color: white;
+		transition: .5s;
+	}
+}
+
+.twitter {
+	margin-top: 15px;
+  background-color: white;
+ 	color: #87D7FF;
+  border: 1px solid #87D7FF;
+  transition: .5s;
+  &:hover {
+		background: #87D7FF;
+		color: white;
+		transition: .5s;
+  }
 }
 
 
