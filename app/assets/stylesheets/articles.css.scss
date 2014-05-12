@@ -420,6 +420,7 @@ ul.tags {
 	aside {
 	margin: 0;
 	width: 100%;
+	z-index: 1;
 		header {
 			margin: 0;
 			padding: 0;
@@ -485,6 +486,7 @@ ul.tags {
 		ul.tags {
 			height: 60px;
 			margin-bottom: 2%;
+			z-index: 0;
 		}
 	}
 	.pagination-buttons {
