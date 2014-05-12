@@ -491,5 +491,16 @@ ul.tags {
 	}
 	.pagination-buttons {
 		padding-right: 2%;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1em;		
+		color: #3b3b3b;
+		text-decoration: none;
+		text-align: right;
+		color: #3b3b3b;
+		border-bottom: 2px solid #fff3f5;
+		display: block;
+		a {
+		margin-bottom: 50px;			
+		}
 	}
 }
