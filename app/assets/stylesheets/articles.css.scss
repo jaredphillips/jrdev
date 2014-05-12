@@ -405,7 +405,7 @@ ul.tags {
 }
  
 /* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
+@media (max-width: 980px) {
 	.wrapper {
 		width: 100%;
 	}
@@ -419,6 +419,7 @@ ul.tags {
 			padding: 0;
 			border-bottom: 2px solid #f6f6f6;
 			background-color: white;
+			overflow: hidden;
 			h1 {
 				padding: 2% 0 3% 2%;
 				text-align: left;
