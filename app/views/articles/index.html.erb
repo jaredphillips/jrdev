@@ -1,4 +1,4 @@
-<div class="wrapper">
+  <div class="wrapper">
   <aside>
     <header>
       <h1><%= link_to 'the junior developer', root_path, class: "title" %></h1>
@@ -15,7 +15,7 @@
     <% @articles.each do |article| %>
       <div class="article-container">
         <%= link_to article.title, article.url, target: "_blank", class: "article-head" %>
-        <p class="test">
+        <p>
           <%= article.description %>
         </p>
         <ul class="tags">
