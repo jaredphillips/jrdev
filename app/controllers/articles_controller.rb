@@ -21,9 +21,11 @@ class ArticlesController < ApplicationController
   def edit
   end
 
+
   def create
     @article = Article.new(article_params)
     if @article.save
+      Twitter.update(@article.tweet)
       redirect_to new_article_path, notice: 'Article was successfully created.'
     else
       render action: 'new'
