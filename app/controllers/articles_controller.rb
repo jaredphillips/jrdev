@@ -25,7 +25,6 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      client.update(@article.twitter_info)
       redirect_to new_article_path, notice: 'Article was successfully created.'
     else
       render action: 'new'
